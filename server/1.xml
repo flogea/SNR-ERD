@@ -1,0 +1,270 @@
+<?xml version="1.0"?>
+<SnmpSimulatorData>
+<Instances
+>
+<!-- .1.3.6.1.2.1.1.1.0 -->
+<Instance
+name=".1.3.6.1.2.1.1.1.0"
+oid=".1.3.6.1.2.1.1.1.0"
+valueType="OctetString"
+>
+<Value><![CDATA[SNR-ERD-2.3; SW:12.7; HW:1.0; LD:1.0;]]></Value>
+</Instance>
+<!-- .1.3.6.1.2.1.1.2.0 -->
+<Instance
+name=".1.3.6.1.2.1.1.2.0"
+oid=".1.3.6.1.2.1.1.2.0"
+valueType="OID"
+>
+<Value><![CDATA[snrErd2]]></Value>
+</Instance>
+<!-- .1.3.6.1.2.1.1.5.0 -->
+<Instance
+name=".1.3.6.1.2.1.1.5.0"
+oid=".1.3.6.1.2.1.1.5.0"
+valueType="OctetString"
+>
+<Value><![CDATA[SNR-ERD-2.3]]></Value>
+</Instance>
+<!-- .1.3.6.1.2.1.2.2.1.1.0 -->
+<Instance
+name=".1.3.6.1.2.1.2.2.1.1.0"
+oid=".1.3.6.1.2.1.2.2.1.1.0"
+valueType="Integer"
+>
+<Value><![CDATA[1]]></Value>
+</Instance>
+<!-- .1.3.6.1.2.1.2.2.1.6.0 -->
+<Instance
+name=".1.3.6.1.2.1.2.2.1.6.0"
+oid=".1.3.6.1.2.1.2.2.1.6.0"
+valueType="OctetString"
+>
+<Value><![CDATA[F8-F0-82-22-10-89]]></Value>
+</Instance>
+<!-- .1.3.6.1.2.1.4.20.1.1.0 -->
+<Instance
+name=".1.3.6.1.2.1.4.20.1.1.0"
+oid=".1.3.6.1.2.1.4.20.1.1.0"
+valueType="IpAddress"
+>
+<Value><![CDATA[172.31.228.20]]></Value>
+</Instance>
+<!-- erd2ipAddress.0 -->
+<Instance
+name="erd2ipAddress.0"
+oid=".1.3.6.1.4.1.40418.2.2.1.1.0"
+valueType="IpAddress"
+>
+<Value><![CDATA[172.31.228.20]]></Value>
+</Instance>
+<!-- erd2ipGatewayAddress.0 -->
+<Instance
+name="erd2ipGatewayAddress.0"
+oid=".1.3.6.1.4.1.40418.2.2.1.2.0"
+valueType="IpAddress"
+>
+<Value><![CDATA[172.31.228.1]]></Value>
+</Instance>
+<!-- erd2ipMonitoredHost.0 -->
+<Instance
+name="erd2ipMonitoredHost.0"
+oid=".1.3.6.1.4.1.40418.2.2.1.3.0"
+valueType="IpAddress"
+>
+<Value><![CDATA[0.0.0.0]]></Value>
+</Instance>
+<!-- erd2ipForTrap.0 -->
+<Instance
+name="erd2ipForTrap.0"
+oid=".1.3.6.1.4.1.40418.2.2.1.4.0"
+valueType="IpAddress"
+>
+<Value><![CDATA[87.251.176.36]]></Value>
+</Instance>
+<!-- erd2do1state.0 -->
+<Instance
+name="erd2do1state.0"
+oid=".1.3.6.1.4.1.40418.2.2.2.1.0"
+valueType="Integer"
+>
+<Value><![CDATA[manLOW	 (0)]]></Value>
+</Instance>
+<!-- erd2do1resetCounter.0 -->
+<Instance
+name="erd2do1resetCounter.0"
+oid=".1.3.6.1.4.1.40418.2.2.2.2.0"
+valueType="Integer"
+>
+<Value><![CDATA[1]]></Value>
+</Instance>
+<!-- erd2do2state.0 -->
+<Instance
+name="erd2do2state.0"
+oid=".1.3.6.1.4.1.40418.2.2.2.3.0"
+valueType="Integer"
+>
+<Value><![CDATA[manualHIGH		 (1)]]></Value>
+</Instance>
+<!-- erd2diAstate.0 -->
+<Instance
+name="erd2diAstate.0"
+oid=".1.3.6.1.4.1.40418.2.2.3.1.0"
+valueType="Integer"
+>
+<Value><![CDATA[high		 (2)]]></Value>
+</Instance>
+<!-- erd2diAcounter.0 -->
+<Instance
+name="erd2diAcounter.0"
+oid=".1.3.6.1.4.1.40418.2.2.3.2.0"
+valueType="Integer"
+>
+<Value><![CDATA[2]]></Value>
+</Instance>
+<!-- erd2di1state.0 -->
+<Instance
+name="erd2di1state.0"
+oid=".1.3.6.1.4.1.40418.2.2.3.3.0"
+valueType="Integer"
+>
+<Value><![CDATA[high		 (2)]]></Value>
+</Instance>
+<!-- erd2di2state.0 -->
+<Instance
+name="erd2di2state.0"
+oid=".1.3.6.1.4.1.40418.2.2.3.4.0"
+valueType="Integer"
+>
+<Value><![CDATA[high		 (2)]]></Value>
+</Instance>
+<!-- erd2di3state.0 -->
+<Instance
+name="erd2di3state.0"
+oid=".1.3.6.1.4.1.40418.2.2.3.5.0"
+valueType="Integer"
+>
+<Value><![CDATA[high		 (2)]]></Value>
+</Instance>
+<!-- erd2phaseSensorState.0 -->
+<Instance
+name="erd2phaseSensorState.0"
+oid=".1.3.6.1.4.1.40418.2.2.3.6.0"
+valueType="Integer"
+>
+<Value><![CDATA[0]]></Value>
+</Instance>
+<!-- erd2temperature.0 -->
+<Instance
+name="erd2temperature.0"
+oid=".1.3.6.1.4.1.40418.2.2.4.1.0"
+valueType="Integer"
+>
+<Value><![CDATA[21]]></Value>
+</Instance>
+<!-- erd2voltage.0 -->
+<Instance
+name="erd2voltage.0"
+oid=".1.3.6.1.4.1.40418.2.2.4.2.0"
+valueType="Integer"
+>
+<Value><![CDATA[0]]></Value>
+</Instance>
+<!-- erd2voltageCritical.0 -->
+<Instance
+name="erd2voltageCritical.0"
+oid=".1.3.6.1.4.1.40418.2.2.4.3.0"
+valueType="Integer"
+>
+<Value><![CDATA[0]]></Value>
+</Instance>
+<!-- erd2humidity.0 -->
+<Instance
+name="erd2humidity.0"
+oid=".1.3.6.1.4.1.40418.2.2.4.4.0"
+valueType="Integer"
+>
+<Value><![CDATA[37]]></Value>
+</Instance>
+<!-- erd2temperatureCritical.0 -->
+<Instance
+name="erd2temperatureCritical.0"
+oid=".1.3.6.1.4.1.40418.2.2.4.6.0"
+valueType="Integer"
+>
+<Value><![CDATA[25]]></Value>
+</Instance>
+<!-- erd2temperatureNormal.0 -->
+<Instance
+name="erd2temperatureNormal.0"
+oid=".1.3.6.1.4.1.40418.2.2.4.5.0"
+valueType="Integer"
+>
+<Value><![CDATA[18]]></Value>
+</Instance>
+<!-- erd2communityString.0 -->
+<Instance
+name="erd2communityString.0"
+oid=".1.3.6.1.4.1.40418.2.2.5.1.0"
+valueType="OctetString"
+>
+<Value><![CDATA[public]]></Value>
+</Instance>
+<!-- erd2trapMode.0 -->
+<Instance
+name="erd2trapMode.0"
+oid=".1.3.6.1.4.1.40418.2.2.5.2.0"
+valueType="Integer"
+>
+<Value><![CDATA[once		 (1)]]></Value>
+</Instance>
+<!-- erd2diAname.0 -->
+<Instance
+name="erd2diAname.0"
+oid=".1.3.6.1.4.1.40418.2.2.5.3.0"
+valueType="OctetString"
+>
+<Value><![CDATA[DIA]]></Value>
+</Instance>
+<!-- erd2di1name.0 -->
+<Instance
+name="erd2di1name.0"
+oid=".1.3.6.1.4.1.40418.2.2.5.5.0"
+valueType="OctetString"
+>
+<Value><![CDATA[DI1]]></Value>
+</Instance>
+<!-- erd2di2name.0 -->
+<Instance
+name="erd2di2name.0"
+oid=".1.3.6.1.4.1.40418.2.2.5.6.0"
+valueType="OctetString"
+>
+<Value><![CDATA[DI2]]></Value>
+</Instance>
+<!-- erd2di3name.0 -->
+<Instance
+name="erd2di3name.0"
+oid=".1.3.6.1.4.1.40418.2.2.5.7.0"
+valueType="OctetString"
+>
+<Value><![CDATA[DI3]]></Value>
+</Instance>
+<!-- erd2rebootERD.0 -->
+<Instance
+name="erd2rebootERD.0"
+oid=".1.3.6.1.4.1.40418.2.2.5.100.0"
+valueType="Integer"
+>
+<Value><![CDATA[0]]></Value>
+</Instance>
+<!-- .0.0 -->
+<Instance
+name=".0.0"
+oid=".0.0"
+valueType="OctetString"
+>
+<Value><![CDATA[]]></Value>
+</Instance>
+</Instances>
+</SnmpSimulatorData>
