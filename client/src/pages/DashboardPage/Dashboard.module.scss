@@ -1,0 +1,33 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .title {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+
+    .name {
+      padding: 10px;
+      font-size: 64px;
+      font-weight: 700;
+      color: rgb(var(--font-rgb));
+      text-transform: uppercase;
+    }
+
+    .version {
+      padding: 10px;
+      font-size: 32px;
+      font-weight: 400;
+      color: rgb(var(--font-secondary-rgb));
+    }
+  }
+
+  .sensorData {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
