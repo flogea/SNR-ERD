@@ -10,8 +10,10 @@ import { setTemperatureFB } from '../../firebase/setTemperatureFB';
 import { HumidityFB } from '../../firebase/setHumidityFB';
 
 import styles from './Dashboard.module.scss';
+import { ErrorPage } from '../ErrorPage';
 
 function DashboardPage() {
+  const [receivedData, setReceivedData] = useState([]);
   const [controllerData, setControllerData] = useState<IControllerData>({
     controllerName: '',
     version: '',
@@ -69,21 +71,24 @@ function DashboardPage() {
 
   useLayoutEffect(() => {
     getAllData().then((res) => {
-      setControllerData((prevState) => ({
-        ...prevState,
-        controllerName: res[0]['.1.3.6.1.2.1.1.5.0'].value,
-        version: res[0]['.1.3.6.1.2.1.1.5.0'].value,
-        temperature: res[0]['erd2temperature.0'],
-        humidity: res[0]['erd2humidity.0'],
-        normalTemp: res[0]['erd2temperatureNormal.0'],
-        criticalTemp: res[0]['erd2temperatureCritical.0'],
-        di1: res[0]['erd2di1state.0'],
-        di2: res[0]['erd2di2state.0'],
-        di3: res[0]['erd2di3state.0'],
-        dia: res[0]['erd2diAstate.0'],
-        do1: res[0]['erd2do1state.0'],
-        do2: res[0]['erd2do2state.0'],
-      }));
+      setReceivedData(res);
+      if (Object.keys(res[0]).length !== 0) {
+        setControllerData((prevState) => ({
+          ...prevState,
+          controllerName: res[0]['.1.3.6.1.2.1.1.5.0'].value,
+          version: res[0]['.1.3.6.1.2.1.1.5.0'].value,
+          temperature: res[0]['erd2temperature.0'],
+          humidity: res[0]['erd2humidity.0'],
+          normalTemp: res[0]['erd2temperatureNormal.0'],
+          criticalTemp: res[0]['erd2temperatureCritical.0'],
+          di1: res[0]['erd2di1state.0'],
+          di2: res[0]['erd2di2state.0'],
+          di3: res[0]['erd2di3state.0'],
+          dia: res[0]['erd2diAstate.0'],
+          do1: res[0]['erd2do1state.0'],
+          do2: res[0]['erd2do2state.0'],
+        }));
+      }
     });
   }, []);
 
@@ -94,7 +99,7 @@ function DashboardPage() {
 
   return (
     <>
-      {controllerData && (
+      {receivedData.length !== 0 ? (
         <div className={styles.dashboard}>
           <div className={styles.title}>
             <div className={styles.name}>{controllerData.controllerName}</div>
@@ -130,6 +135,8 @@ function DashboardPage() {
             <Pin {...controllerData.do2} title="Do2" />
           </div>
         </div>
+      ) : (
+        <ErrorPage text="Server error, sorry" code="<500/>" />
       )}
     </>
   );

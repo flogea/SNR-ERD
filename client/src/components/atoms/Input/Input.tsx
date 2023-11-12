@@ -29,13 +29,7 @@ function Input({ text, oid, value }: { text: string; oid: string; value: number 
       <label htmlFor={id} className={styles.label}>
         {text}
       </label>
-      <input
-        id={id}
-        className={styles.inp}
-        type="number"
-        value={inpValue}
-        onChange={handleChange}
-      />
+      <input id={id} className={styles.inp} type="number" value={inpValue} disabled={true} />
     </div>
   );
 }
