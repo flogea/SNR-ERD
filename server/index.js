@@ -48,9 +48,26 @@ app.get('/api/getData/humidity', (req, res) => {
 app.post('/api/setData/newTemp', (req, res) => {
   try {
     const { oid, newTemp } = req.body;
-    console.log(oid, newTemp);
     setParamsToSNP(oid, newTemp);
-    res.status(200).send('Данные успешно обработаны');
+    Object.entries(oids).map((oid, index) => {
+      getParamsFromSNP({ oid: oid[1], name: oid[0], data: resData });
+    });
+    res.status(200).send([resData]);
+  } catch (error) {
+    console.log(error);
+    res.status(500).send('Ошибка сервера');
+  }
+});
+
+app.post('/api/setData/setPin', (req, res) => {
+  try {
+    const { oid, status } = req.body;
+    console.log(oid, status);
+    setPin(oid, status);
+    Object.entries(oids).map((oid, index) => {
+      getParamsFromSNP({ oid: oid[1], name: oid[0], data: resData });
+    });
+    res.status(200).send([resData]);
   } catch (error) {
     console.log(error);
     res.status(500).send('Ошибка сервера');
@@ -66,6 +83,28 @@ async function setParamsToSNP(oid, newTemp) {
       oid: oid,
       type: snmp.ObjectType.Integer,
       value: Number(newTemp),
+    },
+  ];
+
+  await session.set(varbind, (error, varbinds) => {
+    if (error) {
+      console.error('Ошибка отправки POST запроса:', error);
+    } else {
+      console.log('POST запрос успешно отправлен:', varbinds);
+    }
+    session.close();
+  });
+}
+
+// set Pin
+async function setPin(oid, status) {
+  const session = snmp.createSession(controllerAddress, 'public', options);
+
+  const varbind = [
+    {
+      oid: oid,
+      type: snmp.ObjectType.Integer,
+      value: Number(status),
     },
   ];
 

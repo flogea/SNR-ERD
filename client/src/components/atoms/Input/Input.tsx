@@ -7,8 +7,6 @@ function Input({ text, oid, value }: { text: string; oid: string; value: number 
   const id = useId();
   const [inpValue, setInputValue] = useState<number>(value);
 
-  console.log(oid);
-
   useLayoutEffect(() => {
     setInputValue(value);
   }, [value]);

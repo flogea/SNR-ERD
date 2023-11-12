@@ -7,9 +7,10 @@ interface IButton {
   onClick?: () => void;
   color?: string;
   disabled?: boolean;
+  style?: string;
 }
 
-function Button({ text, onClick, color, disabled }: IButton) {
+function Button({ text, onClick, color, disabled, style }: IButton) {
   return (
     <div>
       <button
