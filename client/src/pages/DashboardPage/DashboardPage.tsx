@@ -112,12 +112,12 @@ function DashboardPage() {
               <Input
                 text="critical temperature"
                 value={Number(controllerData.criticalTemp.value)}
-                oid={controllerData.normalTemp.oid}
+                oid={controllerData.criticalTemp.oid.slice(0, -2)}
               />
               <Input
                 text="normal temperature"
                 value={Number(controllerData.normalTemp.value)}
-                oid={controllerData.normalTemp.oid}
+                oid={controllerData.normalTemp.oid.slice(0, -2)}
               />
             </div>
           </div>

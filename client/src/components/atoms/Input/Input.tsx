@@ -7,11 +7,13 @@ function Input({ text, oid, value }: { text: string; oid: string; value: number 
   const id = useId();
   const [inpValue, setInputValue] = useState<number>(value);
 
+  console.log(oid);
+
   useLayoutEffect(() => {
     setInputValue(value);
   }, [value]);
 
-  const handleDebouncedChange = (newTemp: any) => {
+  const handleDebouncedChange = (newTemp: number) => {
     setNewTemp(oid, newTemp)
       .then((res) => console.log(res))
       .catch((err) => console.log(err));
@@ -29,7 +31,13 @@ function Input({ text, oid, value }: { text: string; oid: string; value: number 
       <label htmlFor={id} className={styles.label}>
         {text}
       </label>
-      <input id={id} className={styles.inp} type="number" value={inpValue} disabled={true} />
+      <input
+        id={id}
+        className={styles.inp}
+        type="number"
+        value={inpValue}
+        onChange={handleChange}
+      />
     </div>
   );
 }

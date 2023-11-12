@@ -58,12 +58,20 @@ app.post('/api/setData/newTemp', (req, res) => {
 });
 
 // set new paramt to SNP
-function setParamsToSNP(oid, newTemp) {
-  const session = snmp.createSession(controllerAddress, 'public');
+async function setParamsToSNP(oid, newTemp) {
+  const session = snmp.createSession(controllerAddress, 'public', options);
 
-  const type = snmp.ObjectType.Integer;
+  const varbind = [
+    {
+      oid: oid,
+      type: snmp.ObjectType.Integer,
+      value: Number(newTemp),
+    },
+  ];
 
-  session.set({ oid, value: newTemp }, (error, varbinds) => {
+  console.log(varbind);
+
+  await session.set(varbind, (error, varbinds) => {
     if (error) {
       console.error('Ошибка отправки POST запроса:', error);
     } else {
@@ -85,7 +93,6 @@ function getParamsFromSNP({ oid, name, data }) {
         if (snmp.isVarbindError(varbinds[i])) {
           console.error(snmp.varbindError(varbinds[i]));
         } else {
-          // console.log(varbinds);
           const reseivedData = varbinds[0]?.value?.toString();
 
           data[name] = { name: name, oid: oid, value: reseivedData };
