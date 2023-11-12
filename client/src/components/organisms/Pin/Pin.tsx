@@ -11,8 +11,8 @@ function Pin({ title, oid, name, value }: IPin) {
   let data;
 
   const handleChangePin = () => {
-    setValue(Number(!+value));
-    setPin(oid.slice(0, -2), Number(!+value))
+    setValue(Number(!+pinValue));
+    setPin(oid.slice(0, -2), Number(!+pinValue))
       .then((res) => console.log(res))
       .catch((err) => console.log(err));
   };
