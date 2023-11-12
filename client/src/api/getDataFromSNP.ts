@@ -17,5 +17,3 @@ export async function getHumidity() {
   console.log(data.data);
   return data.data;
 }
-
-// export { getAllData };

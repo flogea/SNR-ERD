@@ -1,4 +1,6 @@
 .dashboard {
+  width: 100vw;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,7 +15,7 @@
       padding: 10px;
       font-size: 64px;
       font-weight: 700;
-      color: rgb(var(--font-rgb));
+      color: var(--brand-rgb);
       text-transform: uppercase;
     }
 
@@ -29,5 +31,55 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+  }
+
+  .graphs {
+    display: flex;
+  }
+
+  .divider {
+    width: 600px;
+    margin: 10px;
+    height: 1px;
+    background: rgb(var(--font-secondary-rgb));
+  }
+
+  .form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  @media (max-width: 960px) {
+    .title {
+      flex-direction: row;
+
+      .name {
+        font-size: 32px;
+      }
+
+      .version {
+        font-size: 16px;
+      }
+    }
+
+    .sensorData {
+      flex-direction: column;
+
+      // &:nth-child() {
+      //   flex-direction: row;
+      // }
+    }
+
+    .divider {
+      width: 300px;
+    }
+
+    .graphs {
+      flex-direction: column;
+    }
+
+    .form {
+      grid-template-columns: 1fr 1fr;
+    }
   }
 }

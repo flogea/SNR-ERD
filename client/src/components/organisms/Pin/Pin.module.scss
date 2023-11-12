@@ -1,0 +1,18 @@
+.pin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+
+  label {
+    margin: 20px;
+  }
+
+  @media (max-width: 960px) {
+    margin: 10px;
+
+    label {
+      margin: 10px;
+    }
+  }
+}
