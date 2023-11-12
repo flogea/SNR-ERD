@@ -7,6 +7,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "devDependencies": {
+    "cors": "^2.8.5",
     "nodemon": "^3.0.1",
     "snmp-native": "^1.2.0",
     "xml2js": "^0.6.2"

@@ -258,13 +258,5 @@ valueType="Integer"
 >
 <Value><![CDATA[0]]></Value>
 </Instance>
-<!-- .0.0 -->
-<Instance
-name=".0.0"
-oid=".0.0"
-valueType="OctetString"
->
-<Value><![CDATA[]]></Value>
-</Instance>
 </Instances>
 </SnmpSimulatorData>
